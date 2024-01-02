@@ -1,0 +1,143 @@
+* {
+    /* 通配符选择器，为所有元素设置 box-sizing 属性为 border-box */
+    box-sizing: border-box;
+}
+
+body {
+    /* 设置字体族为 Arial 或 sans-serif */
+    font-family: Arial, sans-serif;
+    /* 设置 Flex 布局 */
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    /* 设置高度为视口高度 */
+    height: 100vh;
+    /* 设置背景颜色为浅灰色 */
+    background-color: #f4f4f4;
+
+}
+
+/* 容器样式 */
+.container {
+    /* 最大宽度为 960px */
+    max-width: 960px;
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 文字居中 */
+    text-align: center;
+
+}
+
+/* 标题样式 */
+h1 {
+    /* 设置字体大小为 2.5rem */
+    font-size: 2.5rem;
+    /* 下边距为 50px */
+    margin-bottom: 50px;
+
+}
+
+#check {
+    /* 更改鼠标样式 */
+    cursor: pointer;
+}
+
+.part {
+    /* 隐藏 */
+    display: none;
+
+}
+
+.team-members {
+    /* 团队成员列表样式 */
+    display: flex;
+    /* 设置 Flex 布局 */
+    flex-wrap: wrap;
+    /* 自动换行 */
+    justify-content: space-between;
+    /* 两侧对齐，中间留空隙 */
+}
+
+.team-member {
+    /* 单个团队成员的样式 */
+    width: calc(20% - 5px);
+    /* 宽度占 20%，减去 5px 的间距 */
+    text-align: center;
+    /* 文字居中 */
+    background-color: #fff;
+    /* 背景颜色为白色 */
+    padding: 20px;
+    /* 内边距为 20px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果 */
+    margin-bottom: 40px;
+    /* 下边距为 40px */
+    transition: all 0.5s ease-in-out;
+    /* 添加过渡效果 */
+}
+
+.team-member:hover {
+    /* 鼠标悬停时的样式 */
+    transform: translateY(-20px);
+    /* 向上移动 20px */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* 加深阴影效果 */
+}
+
+.team-member img {
+    /* 成员头像样式 */
+    width: 150px;
+    /* 宽度为 150px */
+    height: 150px;
+    /* 高度为 150px */
+    border-radius: 50%;
+    /* 做成圆形 */
+    margin-bottom: 10px;
+    /* 下边距为 10px */
+}
+
+.team-member h2 {
+    /* 成员姓名样式 */
+    margin: 5px 0;
+    /* 上下边距为 5px，左右边距为 0 */
+    color: #333;
+    /* 字体颜色为深灰色 */
+}
+/* 成员职责样式 */
+.team-member p {
+     /* 字体颜色为中灰色 */
+    color: #666;
+   
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #555;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调查问卷网站</title>
+    <link rel="stylesheet" href="showSurvey.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="question">?</li>
+            <li class="management" onclick="goToManagementHTML()">问卷管理</li>
+            <li class="myQuestion" onclick="goToEditHTML()">新建问卷</li>
+            <li class="home" onclick="goToHomeHTML()">首页</li>
+        </ul>
+        <!-- 添加使用规则按钮 -->
+        <div class="rules" onclick="showVideo()">使用规则</div>
+    </nav>
+    <!-- 视频弹出框 -->
+    <div class="overlay" id="videoOverlay" onclick="hideVideo()">
+        <div class="video-container">
+            <span class="close-btn" onclick="hideVideo()">×</span>
+            <video controls>
+               <!-- 这里放最后录制的网站功能演示视频作为规则  -->
+                <source src="功能演示录屏.webm" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <main>
+        <div class="big-box">
+            <div class="title">
+                <h2 id="survey-title"></h2>
+            </div>
+            <hr>
+            <div id="questions">
+                <!-- 问题将在这里动态添加 -->
+            </div>
+           
+            <hr>
+
+            <div class="footer-box">
+                <input type="button" id="checkHomeBack" onclick="checkHomeBack()" value="返&nbsp;&nbsp;回">
+            </div>
+        </div>
+    </main>
+
+    <script src="showSurvey.js"></script>
+</body>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>团队分工情况</title>
+    <link rel="stylesheet" href="teamwork.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- 显示标题 -->
+        <h1>我们的团队</h1>
+        <!-- 团队成员列表 -->
+        <div class="team-members">
+            <!-- 团队单个成员 -->
+            <!-- 成员：祝钰霖 -->
+            <div class="team-member" id="member1">
+                <!-- 显示成员头像 -->
+                <img src="https://i.postimg.cc/PqzqktgF/20221123184336.jpg" alt="成员1">
+                <!-- 显示成员姓名 -->
+                <h2>祝钰霖</h2>
+                <p id="check">点击查看</p>
+                <div class="part">
+                    编写了home、teamwork、connection、donate、edit的HTML和CSS以及JS的代码。
+                    实现了将新建问卷的相关数据存储到本地。
+                    management的HTML和CSS的代码，以及management.js中从本地存储中读取数据，
+                    并将其动态添加到对应HTMl页面中的代码部分。
+
+                    对最终网站进行测试。录制带讲解的演示视频
+                </div>
+            </div>
+            <!-- 成员：肖康 -->
+            <div class="team-member" id="member2">
+                <img src="https://i.postimg.cc/rpn5LNXH/20231221133141.jpg" alt="成员2">
+                <h2>肖康</h2>
+                <p id="check">点击查看</p>
+                <div class="part">
+                    编写了showSruvey、publishSurvey的HTML和CSS以及JS的代码。
+                    对最终网站进行测试。
+                    将网站托管上线，这样更加方便老师对网站功能进行测试
+                </div>
+            </div>
+            <!-- 成员：周诗博 -->
+            <div class="team-member" id="member3">
+                <img src="https://i.postimg.cc/65WRTPWP/20231221133356.jpg" alt="成员3">
+                <h2>周诗博</h2>
+                <p id="check">点击查看</p>
+                <div class="part">
+                    编写了copyread的HTML和CSS以及JS的代码和delete.js。
+                    对management.js进行了完善，实现了按钮禁用功能以及相关逻辑，实现了
+                    全选和多选勾选删除的部分。
+                    对最终网站进行测试
+                </div>
+            </div>
+            <!-- 成员：李苇森 -->
+            <div class="team-member" id="member4">
+                <img src="https://i.postimg.cc/LsKj48nt/20231221133633.jpg" alt="成员4">
+                <h2>李苇森</h2>
+                <p id="check">点击查看</p>
+                <div class="part">
+                    编写了write的HTML和CSS以及JS的代码,包括将用户填写问卷的数据存储到本地。
+                    对最终网站进行测试
+                </div>
+            </div>
+            <!-- 成员：肖毅 -->
+            <div class="team-member" id="member5">
+                <img src="https://i.postimg.cc/tRk0h1bg/20231221133809.jpg" alt="成员5">
+                <h2>肖毅</h2>
+                <p id="check">点击查看</p>
+                <div class="part">
+                    编写了analysis的HTML和CSS以及JS的代码。
+                    对最终网站进行测试
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <script src="teamwork.js"></script>
+
+</body>
+
+</html>

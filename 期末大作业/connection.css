@@ -1,0 +1,104 @@
+  /* 重置默认样式 */
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+  }
+
+  /* 设定整体样式 */
+  body {
+      background-color: #f6f6f6;
+      color: #333;
+      font-family: Arial, sans-serif;
+  }
+
+  /* 外部容器样式 */
+  .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      /* 设置最小高度为整个视口高度 */
+      padding: 20px;
+  }
+
+  /* 名片样式 */
+  .card {
+      max-width: calc(100% - 40px);
+      /* 使用calc计算宽度，减去左右padding */
+      padding: 40px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+  }
+
+  h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+  }
+
+  p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin-bottom: 20px;
+  }
+
+  ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+  }
+
+  .contact-info li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* 将内容水平居中 */
+      margin-bottom: 20px;
+      margin-right: 10px;
+      /* 设置右侧间距 */
+      transition: all 0.3s ease-out;
+      /* 设置内边距 */
+      padding-left: 1em;
+      padding-right: 1em;
+  }
+
+  /* 图标样式 */
+  .icon {
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+      border-radius: 50%;
+      background-size: cover;
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  /* QQ图标样式 */
+  .qq {
+      background-image: url(https://labfile.oss.aliyuncs.com/courses/10535/qq.svg);
+  }
+
+  /* 邮箱图标样式 */
+  .email {
+      background-image: url(https://labfile.oss.aliyuncs.com/courses/10535/email.svg);
+  }
+
+  /* 信息样式 */
+  .info {
+      flex: 1;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+  }
+
+  /* 鼠标悬停样式 */
+  .contact-info li:hover {
+      background-color: bisque;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }

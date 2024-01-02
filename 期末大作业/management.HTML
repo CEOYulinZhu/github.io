@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>问卷管理</title>
+    <link rel="stylesheet" href="management.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="question">?</li>
+            <li class="management" onclick="goToManagementHTML()">问卷管理</li>
+            <li class="myQuestion" onclick="goToEditHTML()">新建问卷</li>
+            <li class="home" onclick="goToHomeHTML()">首页</li>
+        </ul>
+        <!-- 添加使用规则按钮 -->
+        <div class="rules" onclick="showVideo()">使用规则</div>
+    </nav>
+    <!-- 视频弹出框 -->
+    <div class="overlay" id="videoOverlay" onclick="hideVideo()">
+        <div class="video-container">
+            <span class="close-btn" onclick="hideVideo()">×</span>
+            <video controls>
+                <!-- 这里放最后录制的网站功能演示视频作为规则 -->
+                <source src="功能演示录屏.webm" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="main">
+        <div class="head">
+            <!-- 问卷管理主体内容 -->
+            <span class="title">
+                问卷标题
+            </span>
+            <span class="creatTime">
+                创建日期
+                </spa>
+                <span class="publishTime">
+                    发布日期
+                </span>
+                <span class="deadLine">
+                    截止日期
+                    </spa>
+                    <span class="isPublish">
+                        问卷状态
+                        </spa>
+                        <span class="operate">
+                            操作区域
+                        </span>
+        </div>
+        <div id="survey-list">
+
+        </div>
+        <div id="check-all"></div>
+    </div>
+
+
+
+
+
+    <script src="management.js"></script>
+    <script src="delete.js"></script>
+</body>
+
+</html>

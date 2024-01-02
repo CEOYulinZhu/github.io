@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li class="question">?</li>
+            <li class="management" onclick="goToManagementHTML()">问卷管理</li>
+            <li class="myQuestion" onclick="goToEditHTML()">新建问卷</li>
+            <li class="home" onclick="goToHomeHTML()">首页</li>
+        </ul>
+        <!-- 添加使用规则按钮 -->
+        <div class="rules" onclick="showVideo()">使用规则</div>
+    </nav>
+    <main>
+        <div class="big-box">
+            <a href="edit.HTML">
+                <div class="add">+&nbsp;新建问卷</div>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- 底部导航栏 -->
+    <div class="bottom">
+        <!-- 放所有的导航图片 all-image -->
+        <div class="all-image">
+            <!-- 图片1 -->
+            <div class="nav-image">
+                <a href="teamwork.HTML" target="_blank">
+                    <img src="https://i.postimg.cc/tJntw5dt/Snipaste-2023-12-21-12-13-41.jpg" title="团队分工情况">
+                </a>
+            </div>
+            <!-- 图片2 -->
+            <div class="nav-image">
+                <a href="connection.HTML" target="_blank">
+                    <img src="https://photo.16pic.com/00/60/87/16pic_6087257_b.jpg" title="联系我们">
+                </a>
+            </div>
+            <!-- 图片3 -->
+            <div class="nav-image">
+                <a href="donate.HTML" target="_blank">
+                    <img src="https://bpic.588ku.com/element_origin_min_pic/19/12/06/8b52f5c7164776a1df480164cf29cbc6.jpg"
+                        title="资助我们">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 视频弹出框 -->
+    <div class="overlay" id="videoOverlay" onclick="hideVideo()">
+        <div class="video-container">
+            <span class="close-btn" onclick="hideVideo()">&times;</span>
+            <video controls>
+                <!-- 这里放最后录制的网站功能演示视频作为规则 -->
+                <source src="功能演示录屏.webm" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+
+</html>

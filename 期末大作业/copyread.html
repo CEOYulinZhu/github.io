@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编辑问卷</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+    <body>
+        <nav>
+            <ul>
+                <li class="question">?</li>
+            <li class="management"  onclick="goToManagementHTML()">问卷管理</li>
+            <li class="myQuestion" onclick="goToEditHTML()">新建问卷</li>
+            <li class="home" onclick="goToHomeHTML()">首页</li>
+            </ul>
+            <!-- 添加使用规则按钮 -->
+            <div class="rules" onclick="showVideo()">使用规则</div>
+        </nav>
+        <main>
+          
+    
+    
+            <div class="big-box">
+                <div id="new-survey">
+                    <div class="title">
+                        <h1 id="survey-title" contenteditable="true" onclick="clearPlaceholder()"></h1>
+                        <hr>
+                    </div>
+    
+                    <hr>
+                    <div id="questions">
+                        <!-- 问题将在这里动态添加 -->
+                    </div>
+                    <div id="question-type-options">
+                        <button id="singleQuestionButton" name="question-type" value="single"
+                            onclick="changeQuestionType('single')">
+                            <img src="images/radio.svg" alt="" width="16">
+                            单选题
+                        </button>
+                        <button id="multipleQuestionButton" name="question-type" value="multiple"
+                            onclick="changeQuestionType('multiple')">
+                            <img src="images/checkbox.svg" alt="" width="16">
+                            多选题
+                        </button>
+                        <button id="textQuestionButton" name="question-type" value="text"
+                            onclick="changeQuestionType('text')">
+                            <img src="images/text.svg" alt="" width="16">
+                            文本题
+                        </button>
+    
+    
+                    </div>
+                    <div class="addQuestion" onclick="addQuestion()">+&nbsp;添加问题</div>
+    
+    
+                    <hr>
+    
+                    <div class="survey-bottom">
+                        <label for="deadline">截止日期:</label>
+                        <input type="date" id="deadline">
+                        <button onclick="saveSurvey()">保存问卷</button>
+                        <button onclick="publishSurvey()">发布问卷</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    
+    
+        <!-- 视频弹出框 -->
+        <div class="overlay" id="videoOverlay" onclick="hideVideo()">
+            <div class="video-container">
+                <span class="close-btn" onclick="hideVideo()">×</span>
+                <video controls>
+                    <!-- 这里放最后录制的网站功能演示视频作为规则 -->
+                    <source src="功能演示录屏.webm" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    
+
+   <script src="copyread.js"></script>
+</body>
+
+</html>

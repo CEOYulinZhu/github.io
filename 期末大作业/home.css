@@ -1,0 +1,250 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d3d3d3;
+}
+
+nav {
+    width: 100%;
+    height: 3.5em;
+    background-color: #d04e57;
+    
+    /* 设置为弹性布局 方便子元素居中 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    color: white;
+
+    ul li {
+        display: inline-block;
+
+    }
+
+
+    .question {
+
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        background-color: white;
+        border-radius: 50%;
+
+        /* 文本设置 */
+        color: #efa41c;
+        font-weight: bold;
+        font-size: 1.25em;
+        /* 居中 */
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    .management,
+    .myQuestion,
+    .home {
+        /* 盒子宽高 */
+        height: 2em;
+        width: 5em;
+        font-size: 1.5em;
+        font-weight: bold;
+        /* 文本居中 */
+        text-align: center;
+        line-height: 2em;
+        cursor: pointer;
+    }
+
+    .rules {
+
+        position: absolute;
+        right: 2em;
+        font-size: 1.5em;
+        border: 2px solid white;
+        border-radius: 5px;
+        margin-left: 2em;
+        padding-left: .5em;
+        padding-right: .5em;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+
+    .management:hover,
+    .myQuestion:hover,
+    .home:hover,
+    .rules:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+
+}
+
+.big-box {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    height: 20vh;
+    /* height: 20vh; */
+    margin-top: 10vh;
+    background-color: #ffffff;
+}
+
+.big-box .add {
+    position: absolute;
+    /* 背景颜色设置 */
+    background-color: #d04e57;
+    /* 宽度设置 */
+    width: 8em;
+    height: 2em;
+    /* 居中设置 */
+    /* 水平居中 */
+    margin: auto;
+    /* 竖直居中 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 文本居中 */
+    text-align: center;
+
+    /* 边框设置 */
+    border-radius: 5px;
+
+    /* 文字相关设置 */
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    /* 竖直居中 */
+    line-height: 2em;
+
+    cursor: pointer;
+}
+
+
+/* 添加样式用于视频弹出框 */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.video-container {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
+
+.close-btn {
+    position: absolute;
+    font-size: 30px;
+    top: -30px;
+    right: -10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+video {
+    width: 100%;
+}
+
+/* 底部导航栏样式设置 */
+
+/* 对底部盒子 bottom 进行样式设置 */
+.bottom {
+    /* 固定底部盒子的位置，让其不随页面的下拉而移动 
+    固定定位fixed：相对于浏览器窗口进行定位的
+    */
+    position: fixed;
+    /* 弹性布局，方便子元素居中设置 */
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 竖直居中 */
+    align-items: center;
+    /* z-index: 10; */
+    /* 设置宽和高 */
+    /* width: 548px; */
+    height: 95px;
+    /* 圆角边框设置 */
+    border-radius: 8px;
+    /* 设置背景颜色 并让其半透明显示 */
+    /* background-color: rgba(0, 152, 50, 0.5); */
+    background-color: rgba(228, 167, 64, 0.5);
+    bottom: 50px;
+    /* left:50%;,让盒子的左边缘位于浏览器视口的中点 */
+    left: 50%;
+    /* 微调，使底部盒子水平方向上居中对齐
+    transform: translateX(-50%)让元素（盒子）自身
+    一半的宽度左移
+    */
+    transform: translateX(-50%);
+    /* 添加过渡效果 */
+    transition: width .8s, height .8s;
+}
+
+/* 设置 装有所有导航图片的盒子 all-image */
+.all-image {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 竖直居中 */
+    /* 宽和高 */
+    width: 95%;
+    height: 95%;
+
+    /* 添加动画过渡效果 */
+    transition: text-align 0.3s;
+    /* background-color: #efa41c; */
+
+}
+
+/* 对导航图片 nav-image 进行样式设置 */
+.nav-image {
+    /* 设置外边距 */
+    margin-right: 15px;
+    margin-left: 15px;
+    width: 70px;
+    height: 70px;
+    /* 添加过渡效果 */
+    transition: transform 1s, margin-left .8s, margin-right .8s;
+}
+
+.nav-image img {
+    /* 图片宽和高的设置 */
+    width: 70px;
+    height: 70px;
+    /* 图片圆角设置 */
+    border-radius: 8px;
+}
+
+/* 鼠标经过 bottom 盒子变化效果设置 */
+.bottom:hover {
+    /* 宽和高发生变化:值变大 */
+    width: 450px;
+    height: 120px;
+}
+
+/* 鼠标经过 all-image 盒子变化效果设置 */
+.all-image:hover {
+    /* 
+    让图片居中 这个不要设置也是居中的
+    因为在前面的all-image中就设置了居中,
+    居中效果会自己动态调整居中
+     */
+    text-align: center;
+}
+
+/* 鼠标经过 图片变化效果设置  */
+.bottom .nav-image:hover {
+    /* 图片放大1.5倍 */
+    transform: scale(1.5);
+    /* 图片左右边距增大 */
+    margin-left: 30px;
+    margin-right: 30px;
+}
